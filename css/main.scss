@@ -81,7 +81,7 @@ header {
 
     .gallery__item {
       max-width: calc(#{$index} * 31);
-      margin-bottom: $gallery-gap;
+
       max-height: 180vh;
       border-radius: 8px;
     }
@@ -100,6 +100,7 @@ header {
     }
   }
   .text-block {
+    margin-bottom: $gallery-gap;
     color: $color-text;
     position: relative;
     .text-block__h {
@@ -109,6 +110,41 @@ header {
     }
   }
 }
+
+//description__item
+.gallery-item__wrapper {
+  margin-bottom: $gallery-gap;
+  position: relative;
+  background-color: green;
+  display: flex;
+  border-radius: 8px;
+  .description__item {
+    font-family: outfit-c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding-top: 80px;
+    text-align: center;
+    opacity: 0;
+    border-radius: 8px;
+    transform: scale(0);
+    // -webkit-transition: all .25s;
+    // -o-transition: all .25s;
+    transition: all 0.5s;
+  }
+  &:hover {
+    .description__item {
+      opacity: 1;
+      top: 0;
+      transform: scale(1);
+    }
+  }
+}
+
 //cards
 .container {
   .container-cards {

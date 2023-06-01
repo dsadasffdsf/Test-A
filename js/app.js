@@ -39,6 +39,7 @@ if (ScrollTrigger.isTouch !== 1) {
     );
   });
   let itemsR = gsap.utils.toArray('.gallery__rigth .gallery__item');
+
   itemsR.forEach((item) => {
     gsap.fromTo(
       item,
